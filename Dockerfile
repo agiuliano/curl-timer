@@ -1,6 +1,6 @@
-FROM alpine
+FROM alpine:edge
 
-RUN apk add --update bash curl network-extras && rm -rf /var/cache/apk/*
+RUN apk add --update bash curl && rm -rf /var/cache/apk/*
 
 COPY timer.sh /timer.sh
 RUN chmod +x /timer.sh

@@ -1,5 +1,6 @@
 FROM alpine:edge
 
+RUN apk upgrade -U -a
 RUN apk add --update bash curl && rm -rf /var/cache/apk/*
 
 COPY timer.sh /timer.sh
